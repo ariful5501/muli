@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body{
+          text-align: center;
+          background-color:#211951;
+          color: white;
+          
+        }
+        .bu{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #mb {
+          background-color: #416d19;
+          color: #070f2b;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s, color 0.3s;
+
+
+        }
+
+        #mb:hover {
+          background-color: #f57d1f;
+          color: #211951;
+        }
+    </style>
+    <title>Multiplication Table</title>
+  </head>
+  <body>
+    <div class="bu">
+        <button id="mb" onclick="Multiplier()">
+          Generate Multiplication Table
+        </button>
+    </div>
+    <script>
+      function Multiplier() {
+        for (let i = 1; i <= 20; i++) {
+          for (let j = 1; j <= 10; j++) {
+            let result = i * j;
+            console.log(`${i} X ${j} = ${result}`);
+          }
+          console.log();
+        }
+
+        const a = document.createElement("span");
+        document.body.appendChild(a);
+
+        for (let i = 1; i <= 20; i++) {
+          for (let j = 1; j <= 10; j++) {
+            let result = i * j;
+            a.innerHTML += `${i} X ${j} = ${result}<br>`;
+          }
+          a.innerHTML += "<br>";
+        }
+      }
+    </script>
+  </body>
+</html>
